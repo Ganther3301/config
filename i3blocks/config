@@ -1,0 +1,26 @@
+
+command=$SCRIPT_DIR/$BLOCK_NAME
+color=#433b32
+
+
+[song]
+command=~/.config/i3blocks/scripts/spotify.py
+label=
+interval=1
+color=#1f1f1f
+
+[focusedWindow]
+command=~/.config/i3blocks/scripts/activeWindow
+interval=-3
+background=#ddb26f
+
+[date]
+command=date '+%d/%m %a %R '
+interval=1
+background=#ddb26f
+
+[wifi]
+command=~/.config/i3blocks/scripts/wifi
+label=wifi:
+#INTERFACE=wlan0
+interval=1
