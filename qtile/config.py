@@ -25,7 +25,7 @@
 # SOFTWARE.
 
 from typing import List  # noqa: F401
-
+import os
 from libqtile import bar, layout, widget
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
@@ -34,8 +34,8 @@ from libqtile.utils import guess_terminal
 mod = "mod4"
 terminal = "termite"
 
-lazy.spawn("nitrogen --restore")
-
+os.system("nitrogen --restore")
+os.system("~/.config/polybar/launch.sh")
 
 keys = [
     # Switch between windows
@@ -76,8 +76,9 @@ keys = [
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
 
     # Toggle between different layouts as defined below
-    Key([mod, "shift"], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
+    Key([mod], "space", lazy.next_layout(), desc="Toggle between layouts"),
     Key([mod, "control"], "x", lazy.window.kill(), desc="Kill focused window"),
+    Key([mod], "f", lazy.window.toggle_fullscreen(), desc="Toggles to fullscreen"),
 
     Key([mod, "shift"], "r", lazy.restart(), desc="Restart Qtile"),
     Key([mod, "shift"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
@@ -110,14 +111,14 @@ layouts = [
     layout.Columns(border_focus_stack='#d75f5f'),
     layout.Max(),
     # Try more layouts by unleashing below layouts.
-    layout.Stack(num_stacks=2),
+    #layout.Stack(num_stacks=2),
     #layout.Bsp(),
     #layout.Matrix(),
     #layout.MonadTall(),
     #layout.MonadWide(),
     #layout.RatioTile(),
     layout.Tile(),
-    layout.TreeTab(),
+    #layout.TreeTab(),
     layout.VerticalTile(),
     #layout.Zoomy(),
 ]
@@ -137,7 +138,7 @@ screens = [
                 widget.GroupBox(),
                 widget.WindowName(),
                 widget.Systray(),
-                widget.Clock(format='%Y-%m-%d %a %I:%M %p'),
+                widget.Clock(format='%A,%d/%m %H:%M '),
             ],
             25,
         ),
