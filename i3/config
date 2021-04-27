@@ -48,8 +48,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec termite
-
+bindsym $mod+Return exec terminator
 
 # start a browser
 bindsym $mod+q exec firefox
@@ -220,7 +219,7 @@ title_align center
 
 # window colors
 #                       border              background         text                 indicator
-client.focused         #ffffff               #ffffffff  	#000000          #00ff00
+client.focused         #dfdfdf               #ffffffff  	#000000          #00ff00
 client.unfocused       #000000 			#000000             #ffffff             #00ff00
 client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
 client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
@@ -247,5 +246,3 @@ hide_edge_borders both
 
 # i3-gaps config
 for_window[class=".*"] border pixel 0
-gaps inner 5
-gaps outer 3
