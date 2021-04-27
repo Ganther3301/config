@@ -8,7 +8,7 @@ pfetch
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME="spaceship"
 
 # Pure theme
 fpath+=$HOME/.zsh/pure
@@ -76,11 +76,11 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sudo zsh-autosuggestions zsh-syntax-highlighting zsh-vi-mode)
+plugins=(git sudo zsh-autosuggestions zsh-syntax-highlighting vi-mode zsh-interactive-cd)
 
 VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
 VI_MODE_SET_CURSOR=true
-ZVM_VI_INSERT_ESCAPE_BINDKEY=kj
+VI_INSERT_ESCAPE_BINDKEY=kj
 
 source $ZSH/oh-my-zsh.sh
 
