@@ -19,10 +19,10 @@
 [colors]
 ;background = ${xrdb:color0:#222}
 background = #2d2d2d
-background-alt = #444
+;background-alt = #444
 ;foreground = ${xrdb:color7:#222}
 foreground = #ffffff
-foreground-alt = #555
+;foreground-alt = #555
 primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
@@ -151,7 +151,7 @@ label-urgent-padding = 1
 
 [module/wlan]
 type = internal/network
-interface = wlan1
+interface = wlan0
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
@@ -199,10 +199,12 @@ type = internal/network
 ; interfaces on your machine with `ip link`
 ; Wireless interfaces often start with `wl` and ethernet interface with `eno` or `eth`
 interface = wlan1
+background = #6272a4
+foreground = #282a36
 
 ; Seconds to sleep between updates
 ; Default: 1
-interval = 3.0
+interval = 1
 
 ; Test connectivity every Nth update
 ; A value of 0 disables the feature

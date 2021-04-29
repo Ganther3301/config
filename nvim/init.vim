@@ -34,9 +34,9 @@ set omnifunc=ale#completion#OmniFunc
 let g:ale_completion_autoimport = 1
 
 noremap! kj <ESC>
-noremap bq :bdelete<CR>
-noremap ne :NERDTree<CR>
-noremap nc :NERDTreeClose<CR>
-noremap bu :CtrlPBuffer<CR>
+noremap ;bq :bdelete<CR>
+noremap ;ne :NERDTree<CR>
+noremap ;nq :NERDTreeClose<CR>
+noremap ;bu :CtrlPBuffer<CR>
 let g:ctrlp_map = '<c-p>' 
 let g:ctrlp_cmd = 'CtrlP'

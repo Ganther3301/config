@@ -25,17 +25,16 @@
 # SOFTWARE.
 
 from typing import List  # noqa: F401
-import os
+import subprocess
 from libqtile import bar, layout, widget
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 
 mod = "mod4"
-terminal = "termite"
+terminal = "st"
 
-os.system("nitrogen --restore")
-os.system("~/.config/polybar/launch.sh")
+subprocess.run("nitrogen --restore", shell=True)
 
 keys = [
     # Switch between windows
@@ -86,7 +85,7 @@ keys = [
         desc="Spawn a command using a prompt widget"),
     Key([mod], "d", lazy.spawn("rofi -show run"),
         desc="Spawn rofi"),
-    Key([mod], "q", lazy.spawn("firefox"),
+    Key([mod], "q", lazy.spawn("microsoft-edge-dev"),
         desc="Spawn firefox"),
 ]
     
@@ -108,7 +107,7 @@ for i in groups:
     ])
 
 layouts = [
-    layout.Columns(border_focus_stack='#d75f5f'),
+    layout.Columns(border_focus='#bd93f9'),
     layout.Max(),
     # Try more layouts by unleashing below layouts.
     #layout.Stack(num_stacks=2),
@@ -124,9 +123,9 @@ layouts = [
 ]
 
 widget_defaults = dict(
-    font='roboto bold',
+    font='monospace bold',
     fontsize=12,
-    padding=3,
+    padding=1,
 )
 extension_defaults = widget_defaults.copy()
 
@@ -134,13 +133,69 @@ screens = [
     Screen(
         top=bar.Bar(
             [
-                widget.CurrentLayout(),
-                widget.GroupBox(),
-                widget.WindowName(),
-                widget.Systray(),
-                widget.Clock(format='%A,%d/%m %H:%M '),
+                widget.CurrentLayout(
+                    background='#bd93f9',
+                    foreground='#282a36', 
+                    font='jetbrains mono bold',
+                    padding=0
+                ),
+                widget.TextBox(
+                    text='',
+                    background='44475a',
+                    foreground='bd93f9',
+                    padding=0,
+                    fontsize=62,
+                ),
+                widget.GroupBox(
+                    block_highlight_text_color='44475a',
+                    background='#44475a',
+                    foreground='#f8f8f2',
+                    highlight_color=['f8f8f2', 'f8f8f2'],
+                    inactive='f8f8f2',
+                    highlight_method='line',
+                    borderwidth=2,
+                    font='jetbrains mono bold'
+                ),
+                widget.TextBox(
+                    text='',
+                    foreground='44475a',
+                    background='6272a4',
+                    padding=0,
+                    fontsize=62,
+                ),
+                widget.WindowName(
+                    background='#6272a4',
+                    foreground='#f8f8f2',
+                    font='jetbrains mono bold'
+                ),
+                widget.TextBox(
+                    text='',
+                    background='282a36',
+                    foreground='6272a4',
+                    padding=0,
+                    fontsize=62,
+                ),
+                widget.Spacer(
+                    background='282a36',
+                ),  
+                widget.Spacer(
+                    background='282a36',
+                ),
+
+                widget.TextBox(
+                    text='',
+                    background='282a36',
+                    foreground='ffb86c',
+                    padding=0,
+                    fontsize=62,
+                ),
+                widget.Clock(format='%A,%d/%m %H:%M ',
+                    background='#ffb86c',
+                    foreground='#282a36',
+                    font='jetbrains mono bold',
+                ),
             ],
-            25,
+            19,
         ),
     ),
 ]
