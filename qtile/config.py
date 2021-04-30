@@ -44,6 +44,8 @@ keys = [
     Key([mod], "k", lazy.layout.up(), desc="Move focus up"),
     Key([mod], "Tab", lazy.layout.next(),
         desc="Move window focus to other window"),
+    Key([mod, 'shift'], 'Tab', lazy.layout.previous(),
+       desc="Move window focus back"), 
 
     # Move windows between left/right columns or move up/down in current stack.
     # Moving out of range in Columns layout will create new column.
@@ -86,7 +88,10 @@ keys = [
     Key([mod], "d", lazy.spawn("rofi -show run"),
         desc="Spawn rofi"),
     Key([mod], "q", lazy.spawn("microsoft-edge-dev"),
-        desc="Spawn firefox"),
+        desc="Spawn browser"),
+    # Screenshot
+    Key([], "Print", subprocess.run("flameshot full -p ~/Pictures", shell=True),
+        desc="Screenshot"),
 ]
     
 groups = [Group(i) for i in "123456789"]
@@ -125,7 +130,7 @@ layouts = [
 widget_defaults = dict(
     font='monospace bold',
     fontsize=12,
-    padding=1,
+    padding=3,
 )
 extension_defaults = widget_defaults.copy()
 
@@ -137,14 +142,13 @@ screens = [
                     background='#bd93f9',
                     foreground='#282a36', 
                     font='jetbrains mono bold',
-                    padding=0
                 ),
                 widget.TextBox(
-                    text='',
+                    text='',
                     background='44475a',
                     foreground='bd93f9',
                     padding=0,
-                    fontsize=62,
+                    fontsize=30,
                 ),
                 widget.GroupBox(
                     block_highlight_text_color='44475a',
@@ -157,37 +161,39 @@ screens = [
                     font='jetbrains mono bold'
                 ),
                 widget.TextBox(
-                    text='',
+                    text='',
                     foreground='44475a',
-                    background='6272a4',
+                    background='282a36',
                     padding=0,
-                    fontsize=62,
+                    fontsize=30,
                 ),
-                widget.WindowName(
+#                widget.Spacer(
+#                    background='282a36',
+#                ),  
+#                widget.Spacer(
+#                    background='282a36',
+#                ),  
+#               widget.Spacer(
+#                    background='282a36',
+#                ),
+                  widget.TextBox(
+                    text='',
+                    background='282a36',
+                    foreground='6272a4',
+                    padding=0,
+                    fontsize=30,
+                ),
+              widget.WindowName(
                     background='#6272a4',
                     foreground='#f8f8f2',
                     font='jetbrains mono bold'
                 ),
                 widget.TextBox(
-                    text='',
-                    background='282a36',
-                    foreground='6272a4',
-                    padding=0,
-                    fontsize=62,
-                ),
-                widget.Spacer(
-                    background='282a36',
-                ),  
-                widget.Spacer(
-                    background='282a36',
-                ),
-
-                widget.TextBox(
-                    text='',
-                    background='282a36',
+                    text='',
+                    background='6272a4',
                     foreground='ffb86c',
                     padding=0,
-                    fontsize=62,
+                    fontsize=30,
                 ),
                 widget.Clock(format='%A,%d/%m %H:%M ',
                     background='#ffb86c',
