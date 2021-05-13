@@ -32,7 +32,7 @@ from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 
 mod = "mod4"
-terminal = "st"
+terminal = "termite"
 
 subprocess.run("nitrogen --restore", shell=True)
 
@@ -128,7 +128,7 @@ layouts = [
 ]
 
 widget_defaults = dict(
-    font='monospace bold',
+    font='jetbrains mono bold',
     fontsize=12,
     padding=3,
 )
@@ -141,7 +141,6 @@ screens = [
                 widget.CurrentLayout(
                     background='#bd93f9',
                     foreground='#282a36', 
-                    font='jetbrains mono bold',
                 ),
                 widget.TextBox(
                     text='',
@@ -157,13 +156,13 @@ screens = [
                     highlight_color=['f8f8f2', 'f8f8f2'],
                     inactive='f8f8f2',
                     highlight_method='line',
+                    padding=0,
                     borderwidth=2,
-                    font='jetbrains mono bold'
                 ),
                 widget.TextBox(
                     text='',
                     foreground='44475a',
-                    background='282a36',
+                    background='6272a4',
                     padding=0,
                     fontsize=30,
                 ),
@@ -176,29 +175,20 @@ screens = [
 #               widget.Spacer(
 #                    background='282a36',
 #                ),
-                  widget.TextBox(
-                    text='',
-                    background='282a36',
-                    foreground='6272a4',
-                    padding=0,
-                    fontsize=30,
-                ),
               widget.WindowName(
                     background='#6272a4',
                     foreground='#f8f8f2',
-                    font='jetbrains mono bold'
                 ),
                 widget.TextBox(
-                    text='',
-                    background='6272a4',
-                    foreground='ffb86c',
+                    text='',
+                    foreground='6272a4',
+                    background='ffb86c',
                     padding=0,
                     fontsize=30,
                 ),
                 widget.Clock(format='%A,%d/%m %H:%M ',
                     background='#ffb86c',
                     foreground='#282a36',
-                    font='jetbrains mono bold',
                 ),
             ],
             19,
