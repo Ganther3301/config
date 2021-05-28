@@ -51,7 +51,7 @@ floating_modifier $mod
 bindsym $mod+Return exec st
 
 # start a browser
-bindsym $mod+q exec firefox
+bindsym $mod+q exec microsoft-edge-dev 
 
 # start emacs
 bindsym Control+Shift+"e" exec nvim

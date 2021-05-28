@@ -17,10 +17,4 @@ background=#ddb26f
 [date]
 command=date '+%d/%m %a %R '
 interval=1
-background=#ddb26f
-
-[wifi]
-command=~/.config/i3blocks/scripts/wifi
-label=wifi:
-#INTERFACE=wlan0
-interval=1
+background=#ddb26f 

@@ -32,7 +32,7 @@ from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 
 mod = "mod4"
-terminal = "termite"
+terminal = "st"
 
 subprocess.run("nitrogen --restore", shell=True)
 
@@ -142,29 +142,15 @@ screens = [
                     background='#bd93f9',
                     foreground='#282a36', 
                 ),
-                widget.TextBox(
-                    text='',
-                    background='44475a',
-                    foreground='bd93f9',
-                    padding=0,
-                    fontsize=30,
-                ),
                 widget.GroupBox(
                     block_highlight_text_color='44475a',
-                    background='#44475a',
+                    background='#6272a4',
                     foreground='#f8f8f2',
                     highlight_color=['f8f8f2', 'f8f8f2'],
                     inactive='f8f8f2',
                     highlight_method='line',
-                    padding=0,
+                    padding=1,
                     borderwidth=2,
-                ),
-                widget.TextBox(
-                    text='',
-                    foreground='44475a',
-                    background='6272a4',
-                    padding=0,
-                    fontsize=30,
                 ),
 #                widget.Spacer(
 #                    background='282a36',
@@ -176,15 +162,8 @@ screens = [
 #                    background='282a36',
 #                ),
               widget.WindowName(
-                    background='#6272a4',
+                    background='#44475a',
                     foreground='#f8f8f2',
-                ),
-                widget.TextBox(
-                    text='',
-                    foreground='6272a4',
-                    background='ffb86c',
-                    padding=0,
-                    fontsize=30,
                 ),
                 widget.Clock(format='%A,%d/%m %H:%M ',
                     background='#ffb86c',
