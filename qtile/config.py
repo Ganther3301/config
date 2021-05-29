@@ -112,6 +112,7 @@ for i in groups:
     ])
 
 layouts = [
+    layout.Tile(border_focus='bd93f9'),
     layout.Columns(border_focus='#bd93f9'),
     layout.Max(),
     # Try more layouts by unleashing below layouts.
@@ -121,7 +122,6 @@ layouts = [
     #layout.MonadTall(),
     #layout.MonadWide(),
     #layout.RatioTile(),
-    layout.Tile(),
     #layout.TreeTab(),
     layout.VerticalTile(),
     #layout.Zoomy(),
@@ -129,7 +129,8 @@ layouts = [
 
 widget_defaults = dict(
     font='jetbrains mono bold',
-    fontsize=12,
+    background='#282a36',
+    fontsize=13,
     padding=3,
 )
 extension_defaults = widget_defaults.copy()
@@ -139,18 +140,20 @@ screens = [
         top=bar.Bar(
             [
                 widget.CurrentLayout(
-                    background='#bd93f9',
-                    foreground='#282a36', 
+                    foreground='#ff79c6',
+                    #foreground='#282a36', 
                 ),
                 widget.GroupBox(
-                    block_highlight_text_color='44475a',
-                    background='#6272a4',
-                    foreground='#f8f8f2',
-                    highlight_color=['f8f8f2', 'f8f8f2'],
+                    block_highlight_text_color='',
+                    font='jetbrains mono',
+                    #foreground='#282a36',
+                    active='bd93f9',
+                    foreground='#bd93f9',
+                    highlight_color=['44475a', '44475a'],
                     inactive='f8f8f2',
                     highlight_method='line',
-                    padding=1,
-                    borderwidth=2,
+                    padding=2,
+                    borderwidth=1,
                 ),
 #                widget.Spacer(
 #                    background='282a36',
@@ -162,15 +165,14 @@ screens = [
 #                    background='282a36',
 #                ),
               widget.WindowName(
-                    background='#44475a',
-                    foreground='#f8f8f2',
+                    foreground='#f1fa8c',
                 ),
                 widget.Clock(format='%A,%d/%m %H:%M ',
-                    background='#ffb86c',
-                    foreground='#282a36',
+                    #foreground='#282a36',
+                    foreground='#ffb86c',
                 ),
             ],
-            19,
+            20,
         ),
     ),
 ]

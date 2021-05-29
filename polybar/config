@@ -30,7 +30,7 @@ alert = #bd2c40
 [bar/example]
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
-height =17.5
+height =16.5
 ;offset-x = 1%
 ;offset-y = 1%
 ;radius = 6.0
@@ -81,8 +81,8 @@ cursor-scroll = ns-resize
 type = internal/xwindow
 label = %title%
 label-maxlen = 50
-label-background = #ffb86c
-label-foreground = #44475a
+label-foreground = #ffb86c
+;label-foreground = #44475a
 label-padding = 1
 ;format-underline = #ef4832
 
@@ -124,8 +124,8 @@ label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
 label-focused = %index%
-label-focused-background = #bd93f9
-label-focused-foreground = #44475a
+label-focused-foreground = #bd93f9
+;label-focused-foreground = #44475a
 ;label-focused-underline= #efa732
 label-focused-padding = 1
 
@@ -185,8 +185,8 @@ format-prefix = 
 ;format-underline = #0a6cf5
 
 label = %date% %time%
-label-background = #f1fa8c
-label-foreground = #44475a
+label-foreground = #f1fa8c
+;label-foreground = #44475a
 label-padding = 1
 
 [module/speed]
