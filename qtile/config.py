@@ -143,6 +143,7 @@ screens = [
                     foreground='#ff79c6',
                     #foreground='#282a36', 
                 ),
+                #widget.Sep(),
                 widget.GroupBox(
                     block_highlight_text_color='',
                     font='jetbrains mono',
@@ -155,18 +156,17 @@ screens = [
                     padding=2,
                     borderwidth=1,
                 ),
+                widget.Sep(),
 #                widget.Spacer(
 #                    background='282a36',
 #                ),  
-#                widget.Spacer(
-#                    background='282a36',
-#                ),  
-#               widget.Spacer(
-#                    background='282a36',
-#                ),
               widget.WindowName(
                     foreground='#f1fa8c',
                 ),
+                widget.Net(
+                    foreground='bd93f9',
+                ),
+                widget.Sep(),
                 widget.Clock(format='%A,%d/%m %H:%M ',
                     #foreground='#282a36',
                     foreground='#ffb86c',
