@@ -143,10 +143,10 @@ screens = [
                     foreground='#ff79c6',
                     #foreground='#282a36', 
                 ),
-                #widget.Sep(),
+                widget.Sep(),
                 widget.GroupBox(
                     block_highlight_text_color='',
-                    font='jetbrains mono',
+                    font='',
                     #foreground='#282a36',
                     active='bd93f9',
                     foreground='#bd93f9',
@@ -163,6 +163,7 @@ screens = [
               widget.WindowName(
                     foreground='#f1fa8c',
                 ),
+                widget.Sep(),
                 widget.Net(
                     foreground='bd93f9',
                 ),
