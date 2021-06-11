@@ -32,7 +32,7 @@ from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 
 mod = "mod4"
-terminal = "st"
+terminal = "termite"
 
 subprocess.run("nitrogen --restore", shell=True)
 
@@ -87,7 +87,7 @@ keys = [
         desc="Spawn a command using a prompt widget"),
     Key([mod], "d", lazy.spawn("rofi -show run"),
         desc="Spawn rofi"),
-    Key([mod], "q", lazy.spawn("microsoft-edge-dev"),
+    Key([mod], "q", lazy.spawn("firefox"),
         desc="Spawn browser"),
     # Screenshot
     Key([], "Print", subprocess.run("flameshot full -p ~/Pictures", shell=True),

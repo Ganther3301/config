@@ -7,23 +7,25 @@ Plug 'https://github.com/myusuf3/numbers.vim.git'
 Plug 'vim-scripts/indentpython.vim'
 Plug 'francoiscabrol/ranger.vim'
 Plug 'dense-analysis/ale'
-Plug 'morhetz/gruvbox'
 Plug 'kien/ctrlp.vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'mhartington/oceanic-next'
+Plug 'arcticicestudio/nord-vim'
 
 call plug#end()
 
-set termguicolors
-colorscheme dracula
+"set termguicolors
+syntax enable
+colorscheme nord
 
 "Airline
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
-let g:airline_theme='dracula'
+let g:airline_theme='nord'
 
 set number relativenumber
-set shell=zsh
+set shell=fish
 
 "set statusline+=%#warningmsg#
 "set statusline+=%{SyntasticStatuslineFlag()}
