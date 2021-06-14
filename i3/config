@@ -48,10 +48,10 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec st
+bindsym $mod+Return exec termite
 
 # start a browser
-bindsym $mod+q exec microsoft-edge-dev 
+bindsym $mod+q exec firefox 
 
 # start emacs
 bindsym Control+Shift+"e" exec nvim

@@ -14,7 +14,7 @@ Plug 'arcticicestudio/nord-vim'
 
 call plug#end()
 
-set termguicolors
+"set termguicolors
 "set number relativenumber
 set number
 syntax enable
