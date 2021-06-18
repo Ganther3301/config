@@ -111,8 +111,8 @@ for i in groups:
     ])
 
 layouts = [
-    layout.Tile(border_focus='bd93f9'),
-    layout.Columns(border_focus='#bd93f9'),
+    layout.Tile(border_focus='88c0d0'),
+    layout.Columns(border_focus='#88c0d0'),
     layout.Max(),
     # Try more layouts by unleashing below layouts.
     #layout.Stack(num_stacks=2),

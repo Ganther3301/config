@@ -1,4 +1,3 @@
-# Copyright (c) 2010 Aldo Cortesi
 # Copyright (c) 2010, 2014 dequis
 # Copyright (c) 2012 Randall Ma
 # Copyright (c) 2012-2014 Tycho Andersen
@@ -32,7 +31,7 @@ from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 
 mod = "mod4"
-terminal = "termite"
+terminal = "alacritty"
 
 subprocess.run("nitrogen --restore", shell=True)
 
@@ -112,8 +111,8 @@ for i in groups:
     ])
 
 layouts = [
-    layout.Tile(border_focus='bd93f9'),
-    layout.Columns(border_focus='#bd93f9'),
+    layout.Tile(border_focus='88c0d0'),
+    layout.Columns(border_focus='#88c0d0'),
     layout.Max(),
     # Try more layouts by unleashing below layouts.
     #layout.Stack(num_stacks=2),
