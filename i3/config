@@ -32,6 +32,7 @@ exec --no-startup-id nm-applet
 
 # Runs nitrogen to set wallpaper
 exec --no-startup-id nitrogen --restore
+exec --no-startup-id dunst
 
 # start polybar
 exec --no-startup-id ~/.config/polybar/launch.sh
@@ -48,10 +49,10 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec termite
+bindsym $mod+Return exec xfce4-terminal 
 
 # start a browser
-bindsym $mod+q exec firefox 
+bindsym $mod+q exec google-chrome-stable 
 
 # start emacs
 bindsym Control+Shift+"e" exec nvim

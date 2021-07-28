@@ -1,7 +1,7 @@
 #!/usr/bin/python
 import subprocess
 
-files = ['i3', 'i3blocks', 'nvim', 'polybar', 'qtile']
+files = ['i3', 'i3blocks', 'nvim', 'polybar', 'qtile', 'alacritty']
 
 for i in files:
     subprocess.run("cp -r ~/.config/"+i+" ~/config", shell=True) 

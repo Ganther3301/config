@@ -31,7 +31,7 @@ from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 
 mod = "mod4"
-terminal = "alacritty"
+terminal = "xfce4-terminal"
 
 subprocess.run("nitrogen --restore", shell=True)
 
